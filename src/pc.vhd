@@ -1,6 +1,5 @@
 -- =============================================================================
--- Módulo: PC (Program Counter)
--- Igual que el proyecto anterior, compatible con DE10-Lite
+-- Módulo: PC
 -- =============================================================================
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

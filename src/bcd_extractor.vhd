@@ -1,14 +1,5 @@
 -- =============================================================================
--- Módulo: bcd_extractor
--- Descripción: Convierte un número entero (0-999) a 3 dígitos BCD
---              usando restas sucesivas (sin división, sintetizable).
---
--- Entradas:  valor  → número a convertir (0-999)
--- Salidas:   d2     → centenas (0-9)
---            d1     → decenas  (0-9)
---            d0     → unidades (0-9)
---
--- Ejemplo: valor=32 → d2=0, d1=3, d0=2
+-- Módulo: bcd extractor
 -- =============================================================================
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

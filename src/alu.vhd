@@ -14,16 +14,19 @@ entity alu is
     );
 end entity alu;
 
-architecture arch of alu is				 
+architecture arch of alu is
+    signal mul_result : SIGNED(63 downto 0);
 begin
     process(a, b, ctrl)
-		begin
-			if ctrl = "0000" then
-				res <= std_logic_vector(signed(a) + signed (b));
-			elsif ctrl = "0001" then
-				res <= std_logic_vector(resize(signed(a) * signed (b), 32));
-			else
-				res <= (others=>'0');
-			end if;
-	end process;
+    begin
+        case ctrl is
+            when "0000" =>
+                res <= std_logic_vector(signed(a) + signed(b));
+            when "0001" =>
+                mul_result <= signed(a) * signed(b);
+                res        <= std_logic_vector(mul_result(31 downto 0));
+            when others =>
+                res <= (others => '0');
+        end case;
+    end process;
 end arch;

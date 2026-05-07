@@ -1,17 +1,5 @@
 -- =============================================================================
--- Módulo: seg7_decoder
--- Descripción: Convierte un dígito BCD (0-9) a señales de 7 segmentos.
---              Los displays de la DE10-Lite son activos en BAJO (0=encendido).
---
--- Segmentos:
---        _
---       |_|
---       |_|
---
---   Bit:  6543210
---   Seg:  gfedcba
---
--- Ejemplo: '0' = 1000000 (g apagado, f-a encendidos) → seg = "1000000"
+-- Módulo: Decoder
 -- =============================================================================
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
